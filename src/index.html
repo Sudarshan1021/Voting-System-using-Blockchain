@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- <meta http-equiv="refresh" content="6">-->
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Election Results</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  <div id="contain">
+    <div  class="container" style="width: 650px;">
+      <div class="row">
+        <div class="col-lg-12" >
+          <p id="After" class="text-center text-danger" style="font-size:35px;"></p>
+          <hr/>
+          <br/>
+          <div id="ssss" style="display: none;">
+          <div class="loader" >
+            <p class="text-center"></p>
+          </div>
+          <div class="content" >
+          <h1 class="text-center">Cast your votes</h1>
+          
+            <table class="table">
+              <thead>
+                  <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Votes</th>
+                    
+                  </tr>
+                
+              </thead>
+              <tbody id="candidatesResults">
+              </tbody>
+            </table>
+            <hr/>
+          
+            <div id ="ff">
+            <form onSubmit="App.castVote(); return false ">
+              <div class="form-group">
+                <label for="candidatesSelect">Select Candidate</label>
+                <select class="form-control" id="candidatesSelect">
+                </select>
+              </div>
+              <button id="vote" type="submit" class="btn btn-secondary" onclick="setTimeout('App.init()',7000)">Vote</button>
+              <hr />
+            </form> 
+            </div>
+           </div>
+           </div>
+           
+           <div id="sssss" style="display: block;">
+           <h1 class="text-center">Add Candidates</h1>
+            <form onSubmit="App.ss(); return false">
+              <div class="form-group">
+              <label for="usr">Enter name :</label>
+              <input type="text" class="form-control" id="usr" onfocus="this.value=''">
+              </div>
+            <button type="submit" class="btn btn-primary" >Add candidate</button>
+            <br><br>
+             <p class="bg-info" style="font-size:20px;">Note: Add 2 or more candidates to start the election.</p>
+              <hr />
+           </form>
+           </div >
+           <br>
+           <div id="clockdiv"></div>
+            <br>
+            <p class="text-success" style="font-size:25px;">Set the duration of the election (in minutes):</p>
+            Time: <input type="number" id="h">
+            
+            <br><br><br>
+           <div class = "text-center">
+           
+          <button  id="ww" class="btn btn-danger btn-lg" onclick="App.init();myFunction();mymy();">Start Election</button>
+          
+          </div>
+            <hr />
+
+          <div id="time">
+         </form>
+         
+         <div class="panel panel-info">
+            <p id="accountAddress" class="text-center" style="font-size:15px;"></p>
+            <br><br>
+            <p class="text-center text-primary" style="font-size:25px;">Check whether the above address is your account address. If not click the button below.</p>
+          <div><button id="nn" class="btn btn-warning" onclick='App.init()' style="margin-left:250px;">Update account</button>
+          </div>
+          <br>
+        </div>
+          <br><br>
+            
+          </div>
+          </div>
+        </div>
+        </div>
+        </div>
+        <div id="mast">
+         <h1 class="text-center" style="margin-left:70px;margin-top:100px;"><u>Election to be conducted in <mark>private ethereum blockchain!</mark></u></h1>
+         <h2 class="text-center" style="margin-right:500px;margin-top:150px;"><abbr title="Master">Select your Master Account </abbr>:</h2>
+       <div class="col-md-4 text-center">
+       <button id="nnn" class="btn btn-danger btn-lg" onclick='my();' style="margin-top: 110px;margin-left:650px;">Select Master Account</button>
+    </div>
+</div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
